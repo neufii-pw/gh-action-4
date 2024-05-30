@@ -62,6 +62,10 @@ jobs:
     needs: e2e-against-ci
     runs-on: self-hosted
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-files
       - name: mock deploy pre-prod
         run: echo "mock deploy pre-prod"
   deploy-prod:
