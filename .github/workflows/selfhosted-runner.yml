@@ -38,7 +38,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dist-files
-          path: dist
+          path: |
+            dist
+            .firebaserc
+            firebase.json
   deploy-ci:
     needs: build
     runs-on: self-hosted
