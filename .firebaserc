@@ -15,7 +15,7 @@
     },
     "neufii-gh-action-prod": {
       "hosting": {
-        "pre-prod": ["neufii-gh-action-prod"]
+        "prod": ["neufii-gh-action-prod"]
       }
     }
   }

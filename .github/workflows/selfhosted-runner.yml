@@ -77,7 +77,7 @@ jobs:
     environment: production
     runs-on: self-hosted
     steps:
-      - name: mock deploy prod
+      - name: deploy prod
         run: |
           firebase use neufii-gh-action-prod
           firebase deploy --only hosting:prod
