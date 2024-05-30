@@ -3,12 +3,12 @@
     "default": "neufii-gh-action-ci"
   },
   "targets": {
-    "ci": {
+    "neufii-gh-action-ci": {
       "hosting": {
         "ci": ["neufii-gh-action-ci"]
       }
     },
-    "pre-prod": {
+    "neufii-gh-action-pre-prod": {
       "hosting": {
         "pre-prod": ["neufii-gh-action-pre-prod"]
       }
