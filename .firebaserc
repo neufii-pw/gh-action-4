@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "neufii-gh-action-ci"
+  },
+  "targets": {
+    "ci": {
+      "hosting": {
+        "ci": ["neufii-gh-action-ci"]
+      }
+    },
+    "pre-prod": {
+      "hosting": {
+        "pre-prod": ["neufii-gh-action-pre-prod"]
+      }
+    }
   }
 }
