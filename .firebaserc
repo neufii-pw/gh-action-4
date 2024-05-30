@@ -12,6 +12,11 @@
       "hosting": {
         "pre-prod": ["neufii-gh-action-pre-prod"]
       }
+    },
+    "neufii-gh-action-prod": {
+      "hosting": {
+        "pre-prod": ["neufii-gh-action-prod"]
+      }
     }
   }
 }

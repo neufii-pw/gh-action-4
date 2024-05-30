@@ -68,7 +68,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist-files
-      - name: mock deploy pre-prod
+      - name: deploy pre-prod
         run: |
           firebase use neufii-gh-action-pre-prod
           firebase deploy --only hosting:pre-prod
@@ -78,4 +78,6 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: mock deploy prod
-        run: echo "mock deploy prod"
+        run: |
+          firebase use neufii-gh-action-prod
+          firebase deploy --only hosting-prod
