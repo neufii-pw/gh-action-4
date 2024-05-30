@@ -80,4 +80,4 @@ jobs:
       - name: mock deploy prod
         run: |
           firebase use neufii-gh-action-prod
-          firebase deploy --only hosting-prod
+          firebase deploy --only hosting:prod
