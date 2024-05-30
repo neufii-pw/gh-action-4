@@ -47,8 +47,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist-files
-      - name: mock deploy ci
-        run: echo "mock deploy ci"
+      - name: deploy ci
+        run: firebase deploy
   e2e-against-ci:
     needs: deploy-ci
     runs-on: self-hosted
