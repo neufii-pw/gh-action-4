@@ -19,3 +19,43 @@ jobs:
         run: npm ci
       - name: Run test
         run: npm run test
+  e2e:
+    runs-on: self-hosted
+    steps:
+      - name: mock e2e
+        run: echo "mock e2e"
+  build:
+    needs: [lint, test, e2e]
+    runs-on: self-hosted
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Install Dependencies
+        run: npm ci
+      - name: build
+        run: npm run build
+  deploy-ci:
+    needs: build
+    runs-on: self-hosted
+    steps:
+      - name: mock deploy ci
+        run: echo "mock deploy ci"
+  e2e-against-ci:
+    needs: deploy-ci
+    runs-on: self-hosted
+    steps:
+      - name: mock e2e against ci
+        run: echo "mock e2e ci"
+  deploy-pre-prod:
+    needs: e2e-against-ci
+    runs-on: self-hosted
+    steps:
+      - name: mock deploy pre-prod
+        run: echo "mock deploy pre-prod"
+  deploy-prod:
+    needs: deploy-pre-prod
+    environment: production
+    runs-on: self-hosted
+    steps:
+      - name: mock deploy prod
+        run: echo "mock deploy prod"
